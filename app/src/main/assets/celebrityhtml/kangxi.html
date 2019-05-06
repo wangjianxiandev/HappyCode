@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="base" class="container">
+      <div class="poem">
+        <h2>康熙</h2>
+      </div>
+      <div class="explainpart">
+        <h4>生平事迹</h4>
+        <img src="kangxi.jpg">
+        <p>爱新觉罗·玄烨(1654年5月4日—1722年12月20日），即康熙帝，清朝第四位皇帝、清定都北京后第二位皇帝。</p>
+        <p>他8岁登基，14岁亲政。在位61年，是中国历史上在位时间最长的皇帝。他是中国统一的多民族国家的捍卫者，奠定了清朝兴盛的根基，开创出康乾盛世的大局面。</p>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>勤奋治国：</h4>
+        <p>康熙登位时，由鳌拜等四个大臣辅政。鳌拜结党营私，把持朝政，严重地影响着康熙的统治地位。</p>
+        <p>康熙十四岁开始亲政，为了对付鳌拜集团，就在宫中训练了一批少年侍卫。过了两年，他以下棋为名，召亲信大臣索额图进宫，定下计谋，然后突然召见鳖拜。当鳌拜入朝，康熙历数他的罪状，预先埋伏好的少年侍卫出其不意，一拥而上，把他逮捕。结果，鳌拜被革职拘禁，他的心腹党羽也都被诛杀。就这样，十六岁的康熙初次显示了他的政治才能，开始亲自掌握政权。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>圣祖玄烨</h4>
+        <p>康熙玄烨是顺治帝的第三个儿子，从小就受到祖母孝庄太后的喜爱，特命苏麻喇姑负责照看玄烨，教他读书识字。孝庄太后也经常言传身教，对玄烨加以教诲，希望他能成为继承大统，成为一代明君。</p>
+        <p>但顺治帝当时并不喜爱这个儿子，而是一心一意地想立董鄂妃所生的四子为大子。但这个皇四子很早就夭折了，因而将注意力集中到玄烨这个虽年幼但却有壮志的皇子身上来。公元1661年农历正月初二，顺治帝一病不起，弥留之际，在母亲孝庄太后的坚持下，顺治帝宣布由玄烨继承皇位，并命索尼、苏克萨哈、遏必隆和鳌拜四人为辅佐，然后驾鹤西去。几天后，8岁的玄烨即位称帝，是为清圣祖，又因其年号为康熙，故称康熙帝。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+        <div class="text">
+        <h4>噶尔丹之死</h4>
+        <p>准噶尔原叫绰罗斯。明末，该部在首领巴图尔浑台吉时强大起来。因此，和硕特部便迁到青海、西藏一带；崇祯三年（1630年，天聪四年），土尔扈特部移居到伏尔加河流域去了。</p>
+          <p>浑台吉一死，儿子们就开始争位，在西藏当喇嘛的小儿子噶尔丹，听说哥哥被杀，赶回伊犁，杀了嗣位的索诺木噶尔丹阿拉布坦，于康熙十年（1671）自立为汗。三藩之乱时，他挑动与联合西藏上层集团夹击和硕特部；派兵征服南疆的维吾尔族，每年强征六七万两纹银的贡赋；并多次通使俄国，寻求靠山，以便把自己的势力扩大到漠北蒙古去。三藩之乱被平定后，他在俄国侵略者的指使下，于康熙二十七年（1688）居然越过杭爱山脉，突袭了土谢图汗察珲多尔济父子，掠夺了活佛哲卜尊丹巴胡图克图的财产，使外蒙同胞“死者相枕”、“逃亡死绝”，并堵塞了朝廷赴楚库柏兴谈判的使团的去路。康熙二十八年（1689），他驻兵克鲁伦河，时窥漠南。康熙二十九年（1690）7月，他越过呼伦湖，掠夺内蒙乌珠穆沁部，在乌尔会河还袭击了尚书阿尔尼率领的蒙古兵。</p>
+        
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+    var articles=document.getElementsByClassName("text");
+    var showHeight=100;
+    var unfolds=document.getElementsByClassName('unfold');
+    var folds=document.getElementsByClassName('fold');
+    i=0;
+    for (i = articles.length - 1; i >= 0; i--) {
+      articles[i].index=i;
+      folds[i].index=i;
+      unfolds[i].index=i;
+      if (articles[i].scrollHeight>showHeight) {
+        unfolds[i].style.display='block';
+        folds[i].style.display='none';
+      }
+      else{
+        unfolds[i].style.display='none';
+        folds[i].style.display='none';
+      }
+      unfolds[i].onclick=function(){
+      articles[this.index].style.height='auto';
+      unfolds[this.index].style.display='none';
+      folds[this.index].style.display='block';
+      }
+      folds[i].onclick=function(){
+        articles[this.index].style.height=showHeight+'px';
+        unfolds[this.index].style.display='block';
+        folds[this.index].style.display='none';
+      }
+    }
+    
+
+    </script>
+  </body>
+</html>

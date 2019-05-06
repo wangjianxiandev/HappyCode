@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="base" class="container">
+      <div class="poem">
+        <h2>司马光</h2>
+      </div>
+      <div class="explainpart">
+        <h4>生平事迹</h4>
+        <img src="simaguang.jpg">
+        <p>司马光（1019年11月17日－1086年），字君实，号迂叟，汉族，陕州夏县（今山西夏县）涑水乡人 ，世称涑水先生。北宋政治家、史学家、文学家。</p>
+        <p>司马光宋仁宗时中进士，英宗时进龙图阁直学士。宋神宗时，反对王安石施行变法，朝廷内外有许多人反对，司马光就是其中之一。王安石变法以后，司马光离开朝廷十五年，主持编纂了中国历史上第一部编年体通史《资治通鉴》。</p>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>司马光砸缸</h4>
+        <p>司马光七岁的时候稳重的就像一个大人,听到老师讲解《左氏春秋》,非常喜爱,放学之后又为家人讲他所学到的,他立即也明白了《左氏春秋》的内涵.从此手里放不下书本,甚至到了忘记了饥渴,冷热的程度。有一次,他跟小伙伴们在后院里玩耍.有个小孩爬到大缸上玩,失足掉到缸里的水中.别的孩子们一见出了事,放弃他都跑了.司马光却急中生智,从地上捡起一块大石头,使劲向水缸击去,水涌出来,小孩也得救了。</p>
+
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>低调淡泊</h4>
+        <p>司马光性情淡泊不喜奢华，他在《训俭示康》中曾提到小时后长辈会给他穿华美的衣服，他总是害羞脸红而把它脱下。宝元年间中举时，曾得到仁宗的接见。酒席宴会上，每人都在头上插满鲜花，肆无忌惮地嬉戏取乐，唯独司马光正襟危坐，也不戴花。被同行的人提醒后，司马光才不太情愿地戴了一朵小花。</p>
+        <p>司马光有一个老仆，一直称呼他为“君实秀才”。一次，苏轼来到司马光府邸，听到仆人的称呼，不禁好笑，戏谑曰：“你家主人不是秀才，已经是宰相亦，大家都称为‘君实相公’！”老仆大吃一惊，以后见了司马光，都毕恭毕敬地尊称“君实相公”，并高兴地说：“幸得大苏学士教导我……”司马光跌足长叹：“我家这个老仆，活活被子瞻教坏了。”</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+        <div class="text">
+        <h4>坚不纳妾</h4>
+        <p>北宋士大夫生活富裕，有纳妾蓄妓的风尚。司马光是和王安石、岳飞一样，极为罕见的不纳妾、不储妓之人。婚后三十年余，妻子张夫人没有生育，司马光并未放在心上，也没想过纳妾生子。张夫人却急得半死，一次，她背着司马光买了一个美女，悄悄安置在卧室，自己再借故外出。司马光见了，不加理睬，到书房看书去了。美女也跟着到了书房，一番搔首弄姿后，又取出一本书，随手翻了翻，娇滴滴地问：“请问先生，中丞是什么书呀？”司马光离她一丈，板起面孔，拱手答道：“中丞是尚书，是官职，不是书！”美女很是无趣，大失所望地走了。</p>
+          <p>还有一次，司马光到丈人家赏花。张夫人和丈母娘合计，又偷偷地安排了一个美貌丫鬟。司马光不客气了，生气地对丫鬟说：“走开！夫人不在，你来见我作甚！”第二天，丈人家的宾客都知道了此事，十分敬佩，说俨然就是“司马相如和卓文君”白头偕老的翻版。唯独一人笑道：“可惜司马光不会弹琴，只会鳖厮踢！”张夫人终身未育，司马光就收养了哥哥的儿子“司马康”，作为养子。</p>
+        
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+    var articles=document.getElementsByClassName("text");
+    var showHeight=100;
+    var unfolds=document.getElementsByClassName('unfold');
+    var folds=document.getElementsByClassName('fold');
+    i=0;
+    for (i = articles.length - 1; i >= 0; i--) {
+      articles[i].index=i;
+      folds[i].index=i;
+      unfolds[i].index=i;
+      if (articles[i].scrollHeight>showHeight) {
+        unfolds[i].style.display='block';
+        folds[i].style.display='none';
+      }
+      else{
+        unfolds[i].style.display='none';
+        folds[i].style.display='none';
+      }
+      unfolds[i].onclick=function(){
+      articles[this.index].style.height='auto';
+      unfolds[this.index].style.display='none';
+      folds[this.index].style.display='block';
+      }
+      folds[i].onclick=function(){
+        articles[this.index].style.height=showHeight+'px';
+        unfolds[this.index].style.display='block';
+        folds[this.index].style.display='none';
+      }
+    }
+    
+
+    </script>
+  </body>
+</html>

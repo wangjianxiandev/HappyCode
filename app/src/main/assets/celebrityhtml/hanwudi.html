@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="base" class="container">
+      <div class="poem">
+        <h2>汉武帝</h2>
+      </div>
+      <div class="explainpart">
+        <h4>生平事迹</h4>
+        <img src="hanwudi.jpg">
+        <p>汉武帝刘彻（公元前156年7月14日－公元前87年3月29日），西汉第七位皇帝，杰出的政治家、战略家、诗人。</p>
+        <p>汉武帝时期攘夷拓土，东并朝鲜、南吞百越、西征大宛、北破匈奴，奠定了汉地范围，首开丝绸之路、首创年号，国威远扬，但在位后期穷兵黩武，征和四年（公元前89年），刘彻下罪己诏。</p>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>后宫之怨：</h4>
+        <p>后宫是未央宫一个重要的组成部分。班固《西都赋》即写到“后宫则有掖庭椒房，后妃之室”，说明这里主要是后妃们居住的地方。</p>
+        <p>未央宫中的后宫，在汉武帝时期规模最为庞大，开始分为八区，有昭阳、飞翔、增成、合欢、兰林、披香、凤凰、鸳鸯等殿，后来又增修安处、常宁、柴若、椒风、发越、蕙草等殿，共十四区，里面住着从全国各地搜罗来的少女，为武帝一人提供特殊服务。仅太初四年（前101），就征发了二千名燕赵美女充实后宫。这些女子全部在十五岁以上、二十岁以下，一旦年满三十则出嫁之。若有出嫁或死亡的，则随时征集，以补足既定的数目。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>钩弋夫人：</h4>
+        <p>汉武帝刘彻巡狩，路过河间国（今属河北）时，观天相、占卜吉凶的“望气者”对汉武帝说此地有奇女，汉武帝立即下诏派人寻找。</p>
+        <p>果然如望气者所言，一会儿的工夫，随行官员就找到一位年轻漂亮的女子，据说此女天生双手握成拳状，虽年已十多岁，但依然不能伸开。汉武帝唤此女过来，见其双手果真是紧握拳状，汉武帝伸出双手将这女子手轻轻一掰，少女的手便被分开，在手掌心里还紧紧地握着一只小玉钩。随后，汉武帝命人将此女扶入随行的轺车，将其带回皇宫，由此而得到汉武帝的宠爱，号称拳夫人，此女便是赵氏。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+        <div class="text">
+        <h4>推恩令：</h4>
+        <p>汉武帝曾听从主父偃之计，成功地运用此术，取得过良好的效果。 汉朝初年，刘邦为藩卫王室，曾大封同姓子弟，诸侯藩国的土地几乎占去了三分之二，大大影响了中央财政收入，且那些藩王也都拥兵自重，对中央王朝形成威胁。</p>
+          <p>汉景帝时，曾想解决这一问题，听从晁错之计，推行削藩政策，结果激起了“七国叛乱”，只得草草收场。汉武帝上台后，励精图治，想干一番大事业，自然先要巩固内部，消除隐患。如何消灭诸侯权力，分散其国力、兵力呢？中大夫主父偃献上一计：“皇上推行恩典，命各诸侯把自己的地分给自己的子弟，再由皇上赐给封号。这样一来，那些诸侯国内众多的诸王子弟当然高兴，各侯王见朝廷让自己把土地分给自己的骨肉，觉得也无为不可。”于是，这种“推恩法”(皇帝把自己的土地分给自己的骨肉，是施恩惠。各诸侯王将此法推而广之，也把自己所得的封地再分给自己的骨肉，故日“推恩”。)得以迅速顺利实施。结果，齐国分为七，赵国分为六，梁国分为五，淮南国分为三，其他各王国亦越分越小，对中央王朝再也形不成威胁了。</p>
+        
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+    var articles=document.getElementsByClassName("text");
+    var showHeight=100;
+    var unfolds=document.getElementsByClassName('unfold');
+    var folds=document.getElementsByClassName('fold');
+    i=0;
+    for (i = articles.length - 1; i >= 0; i--) {
+      articles[i].index=i;
+      folds[i].index=i;
+      unfolds[i].index=i;
+      if (articles[i].scrollHeight>showHeight) {
+        unfolds[i].style.display='block';
+        folds[i].style.display='none';
+      }
+      else{
+        unfolds[i].style.display='none';
+        folds[i].style.display='none';
+      }
+      unfolds[i].onclick=function(){
+      articles[this.index].style.height='auto';
+      unfolds[this.index].style.display='none';
+      folds[this.index].style.display='block';
+      }
+      folds[i].onclick=function(){
+        articles[this.index].style.height=showHeight+'px';
+        unfolds[this.index].style.display='block';
+        folds[this.index].style.display='none';
+      }
+    }
+    
+
+    </script>
+  </body>
+</html>

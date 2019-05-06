@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="base" class="container">
+      <div class="poem">
+        <h2>孔子</h2>
+      </div>
+      <div class="explainpart">
+        <h4>生平事迹</h4>
+        <img src="kongzi.jpg">
+        <p>孔子（公元前551年9月28日―公元前479年4月11日），子姓，孔氏，名丘，字仲尼，中国著名的大思想家、大教育家、政治家。孔子开创了私人讲学的风气，是儒家学派的创始人。</p>
+        <p>孔子在古代被尊奉为“天纵之圣”、“天之木铎”，是当时社会上的最博学者之一，其儒家思想对中国和世界都有深远的影响，孔子被列为“世界十大文化名人”之首。</p>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>尼山降生</h4>
+        <p>在距今两千五百多年的春秋时期，周朝政权日益衰落，各诸侯国间互相征伐，烽烟四起，其中以齐、晋、楚、宋、秦五国最为强盛，称霸一方。</p>
+        <p>在当时的鲁国，有一位十分勇猛的武士，名为孔纥（he），字叔梁，虽然年过40，却孔武有力，健壮非凡。据说在一次攻城战中，鲁国军队攻入敌国城池，半途却被一道大铁闸所截，孔纥双臂顶闸而起，助军队入城，因此战功，孔纥被封为陬邑大夫（相当于将军）。</p>
+        <p>孔纥不但武艺非凡，且人品出众，博学多才，喜欢博览群书，闲时钻研武艺。他的妻子施氏，为他生有九个女儿。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>寒窗学易</h4>
+        <p>颜襄早年曾经在仕为官，退休之后广收门徒，传授六艺，被誉为方圆百里有名的先生。晚年的他虽然已没有再收徒，但当年所授的弟子有的在朝作官，有的在外为师，女儿们更各个嫁入贵族世家，所以生活亦无忧，颇为自在。</p>
+        <p>孔子自从来到外公家后，就一头钻进了颜襄那丰富的藏书舍中，把诗经古典和周易都浏览个遍，每遇到不懂的地方，就虚心恭敬地向颜襄请教，学问大有长进。</p>
+      </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+        <div class="text">
+        <h4>四出求学：</h4>
+        <p>这天一大早，孔子就收到了消息，说郯国的郯子已经来到鲁国拜访鲁王。孔子知道郯子是个博学又贤能的人，于是很想借机向他请教。 这时孔子只是一个下级的吏官，没有资格参加鲁王为郯子举行的宴会。于是他早早驾车赶到了鲁国宾侯馆（郯子的暂住处）门前，耐心等候……</p>
+          <p>烈日炎炎，照得大地如火炉般生烟。身上的衣裳都被汗黏在了一起，额头的汗珠迷湿了眼睛，可孔子还是一动不动地等候在宾侯馆前。求学的欲望让他忘记了一切，他的心里只清楚一件事，就是绝不能错失一个可能唯一的向贤能之人求学的机会。</p>
+          <p>一直到了下午，黄土滚滚的官道才缓缓出现了一辆马车，车上坐的正是郯子和他的家臣。原来鲁昭公宴请完郯子之后，季氏为了炫耀和显示自己高贵的地位和权力，马上也将郯子请到了府中做客。郯子无奈抽身应对，所以一直到了傍晚才能归来。</p>
+        
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+    var articles=document.getElementsByClassName("text");
+    var showHeight=100;
+    var unfolds=document.getElementsByClassName('unfold');
+    var folds=document.getElementsByClassName('fold');
+    i=0;
+    for (i = articles.length - 1; i >= 0; i--) {
+      articles[i].index=i;
+      folds[i].index=i;
+      unfolds[i].index=i;
+      if (articles[i].scrollHeight>showHeight) {
+        unfolds[i].style.display='block';
+        folds[i].style.display='none';
+      }
+      else{
+        unfolds[i].style.display='none';
+        folds[i].style.display='none';
+      }
+      unfolds[i].onclick=function(){
+      articles[this.index].style.height='auto';
+      unfolds[this.index].style.display='none';
+      folds[this.index].style.display='block';
+      }
+      folds[i].onclick=function(){
+        articles[this.index].style.height=showHeight+'px';
+        unfolds[this.index].style.display='block';
+        folds[this.index].style.display='none';
+      }
+    }
+    
+
+    </script>
+  </body>
+</html>

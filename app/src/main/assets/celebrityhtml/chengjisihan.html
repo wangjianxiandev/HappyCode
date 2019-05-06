@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="base" class="container">
+      <div class="poem">
+        <h2>成吉思汗</h2>
+      </div>
+      <div class="explainpart">
+        <h4>生平事迹</h4>
+        <img src="chengjisihan.jpg">
+        <p>孛儿只斤·铁木真（1162年5月31日—1227年8月25日），蒙古帝国可汗，尊号“成吉思汗”（Ghinggis Khan），意为“拥有海洋四方“。世界史上杰出的政治家、军事家。</p>
+        <p> 1206年春天建立大蒙古国，此后多次发动对外征服战争，征服地域西达中亚、东欧的黑海海滨。1227年在征伐西夏的时候去世，之后被密葬。</p>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>陵墓何在：</h4>
+        <p>700多年前一代天骄成吉思汗撒手人寰，由于实行“密葬”，成吉思汗墓究竟藏在哪里？为后人留下长久谜团。几百年来人们四处打探但是一无所获。</p>
+        <p>最近一条爆炸性的新闻在国内媒体出现：日本和蒙古国联合考古队宣布在蒙古首都乌兰巴托附近发现了成吉思汗的墓地。据称如果属实，相信将成为轰动世界的考古发现。</p>
+        <p>有记者分别采访了两位对蒙古历史尤其是成吉思汗有过较长时间研究的学者，一位是内蒙古社科院的研究员潘照东，一位是前不久在中央电视台热播的电视剧《成吉思汗》的编剧朱耀廷。无一例外，两位学者均对这个消息的可靠程度表示出谨慎的质疑。也就是说，目前所发现的证据还不足以证明就是成吉思汗墓。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>铁血柔情：</h4>
+        <p>成吉思汗众多后妃中受宠爱的，除大皇后孛儿帖外，只有二皇后忽兰、三皇后也遂、四皇后也速千四人。二皇后忽兰年轻美貌，性情温和，懂得关心照顾人，因此在成吉思汗后半生最受宠爱。</p>
+        <p>成吉思汗西征时，只带忽兰一人陪伴，让她在征途中照顾。忽兰生有一个儿子阔列坚，成吉思汗对阔列坚视如嫡子，非常疼爱，以至于舍不得让他去战场征战。三皇后也遂美貌而有智慧，成吉思汗西征前夕，也遂向成吉思汗奏请早立继位人，她说：“一旦您如柱石般的身躯突然倾倒，您的似雀群般的百姓交给准呢？这事该让诸子、诸弟、百姓、后妃们知道。”成吉思汗采纳了她的建议，选定窝阔台为继位人。</p>
+        <p>1226年成吉思汗率大军出征西夏，只携带也遂一人陪伴。途中成吉思汗坠下马来，受伤很重，也遂就代替他召集诸垒子、诸将开会，商议军国大事。也遂的干练得到了成吉思汗的欣赏，她是成吉思汗的侧妃中唯一一位能够参与政事者。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+        <div class="text">
+        <h4>敬重贤人：</h4>
+        <p>成吉思汗的目光是远大的，他不仅善于从蒙古部落中选拔人才，还善于从蒙古以外的各民族中选拔英才。他不分出身高低与部落、不分归附先后与亲疏，无论是自己培养的还是降俘的，不分阶层、民族、部落，只要有才能，一律加以任用。</p>
+          <p>塔塔统阿是畏兀儿人，他为乃蛮部太阳汗掌管金印钱粮，精通畏兀儿文字。成吉思汗击溃太阳汗乃蛮部后，塔塔统阿怀逃走，被蒙古军擒获。成吉思汗问他：“你带着金印要逃到哪里去？”他答道：“保护金印是臣的职责，臣想找到故主把印交给他。”成吉思汗赞许他的忠心，问他此印有何用，他答道：“出纳钱粮，委任人才，一切事均须用印为信验。”成吉思汗遂命他随侍左右掌印，此后凡有制旨都开始使用印章。成吉思汗还命塔塔统阿创制了畏兀儿字蒙古文，让他教授皇族子弟读书写字。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+    var articles=document.getElementsByClassName("text");
+    var showHeight=100;
+    var unfolds=document.getElementsByClassName('unfold');
+    var folds=document.getElementsByClassName('fold');
+    i=0;
+    for (i = articles.length - 1; i >= 0; i--) {
+      articles[i].index=i;
+      folds[i].index=i;
+      unfolds[i].index=i;
+      if (articles[i].scrollHeight>showHeight) {
+        unfolds[i].style.display='block';
+        folds[i].style.display='none';
+      }
+      else{
+        unfolds[i].style.display='none';
+        folds[i].style.display='none';
+      }
+      unfolds[i].onclick=function(){
+      articles[this.index].style.height='auto';
+      unfolds[this.index].style.display='none';
+      folds[this.index].style.display='block';
+      }
+      folds[i].onclick=function(){
+        articles[this.index].style.height=showHeight+'px';
+        unfolds[this.index].style.display='block';
+        folds[this.index].style.display='none';
+      }
+    }
+    
+
+    </script>
+  </body>
+</html>

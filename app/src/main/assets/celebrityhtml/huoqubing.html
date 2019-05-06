@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="base" class="container">
+      <div class="poem">
+        <h2>霍去病</h2>
+      </div>
+      <div class="explainpart">
+        <h4>生平事迹</h4>
+        <img src="huoqubing.jpg">
+        <p>霍去病（前140年—前117年），汉族，河东平阳（今山西临汾西南）人，西汉名将、军事家，官至大司马骠骑将军，封冠军侯。霍去病是名将卫青的外甥，善骑射，用兵灵活，注重方略，不拘古法，勇猛果断，善于长途奔袭、闪电战和大迂回、大穿插作战。 </p>
+        <p> 初次征战即率领800骁骑深入敌境数百里，把匈奴兵杀得四散逃窜。在两次河西之战中，霍去病大破匈奴，俘获匈奴祭天金人，直取祁连山。在漠北之战中，霍去病封狼居胥，大捷而归。元狩六年，霍去病因病去世，年仅24岁（虚岁）。</p>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>少年得幸因功贵宠</h4>
+        <p>霍去病是大将军卫青的姐姐卫少儿与平阳县吏霍仲孺私通所生。因与皇帝的裙带关系，18岁就得皇帝宠信，做了侍中。</p>
+        <p>元朔六年（前123），霍去病被汉武帝任命为骠姚校尉，跟随大将军卫青出击匈奴。在此役中，霍去病率领800名骁勇骑兵甩开大军数百里去寻歼匈奴，歼敌两千余人，其中包括相国、当户和单于祖父辈贵人籍若侯产，生捕单于叔父罗姑比，功劳冠于全军，于是武帝封食邑1600户，并赐冠军侯。</p>
+        <p>元狩二年（前121）春，霍去病升任为骠骑将军，率领一万骑兵出陇西，越过乌戾山讨伐遫濮，渡过狐奴河，历经五国，转战六天。在越过焉支山一千多里后，同敌人短兵相接，杀折兰王、卢胡王，活捉浑邪王的儿子和相国、都尉，缴获休屠王的祭天佛像，歼敌八千多人，被加封2000户食邑。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>贵宠愈盛积习难移：</h4>
+        <p>元狩四年（前119），武帝建议利用匈奴轻视汉军、放松漠北防御之机，发众兵打击匈奴。这年春天，命大将军卫青和骠骑将军霍去病各率五万骑兵，另有步兵和运输部队共几十万人同击匈奴。敢于力战深入的士兵都隶属于霍去病，军需物资等与大将军相同。霍去病从代郡出兵，无副将，全用李敢等高级校尉当作副将，直指匈奴左方的军队，大胜而归，功劳远胜于卫青。武帝又加封5800户食邑给霍去病，随从霍去病的各将及校尉也都因功封侯获食邑。</p>
+        <p>后来，汉廷设大司马一职，卫青、霍去病同为大司马。朝廷还制定法令使骠骑将军的俸禄与大将军卫青相同。从此以后，骠骑将军霍去病的权势日益显贵，超过了大将军卫青，卫青的老熟人和门客大多离去投到了霍去病府下。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+        <div class="text">
+        <h4>西汉骁勇：</h4>
+        <p>元狩二年（前121年）3月，汉武帝以霍去病为骠骑将军，令其率领1万骑兵，反攻进迫河西（今甘肃武威、张掖、酒泉一带）的匈奴军，决心以强有力的骑兵部队打通西域的道路，解除长安侧翼威胁。</p>
+          <p>年仅20岁的霍去病接受任务后，立即出发。他率军穿过乌鞘岭，跨过狐奴河，一路猛冲猛杀，超越焉耆山（又称焉支山，今甘肃民乐县东）千余里，杀死匈奴卢胡王、折兰王，俘虏浑邪王子及相国、都尉等，共歼敌8900多人。这是他第一次单独率军进行的深远作战，初步摸索了骑兵集团远距离奔袭的经验，为以后组织的全面反击匈奴的漠北之战奠定了基础。</p>
+        
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+    var articles=document.getElementsByClassName("text");
+    var showHeight=100;
+    var unfolds=document.getElementsByClassName('unfold');
+    var folds=document.getElementsByClassName('fold');
+    i=0;
+    for (i = articles.length - 1; i >= 0; i--) {
+      articles[i].index=i;
+      folds[i].index=i;
+      unfolds[i].index=i;
+      if (articles[i].scrollHeight>showHeight) {
+        unfolds[i].style.display='block';
+        folds[i].style.display='none';
+      }
+      else{
+        unfolds[i].style.display='none';
+        folds[i].style.display='none';
+      }
+      unfolds[i].onclick=function(){
+      articles[this.index].style.height='auto';
+      unfolds[this.index].style.display='none';
+      folds[this.index].style.display='block';
+      }
+      folds[i].onclick=function(){
+        articles[this.index].style.height=showHeight+'px';
+        unfolds[this.index].style.display='block';
+        folds[this.index].style.display='none';
+      }
+    }
+    
+
+    </script>
+  </body>
+</html>

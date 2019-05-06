@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="base" class="container">
+      <div class="poem">
+        <h2>皇太极</h2>
+      </div>
+      <div class="explainpart">
+        <h4>生平事迹</h4>
+        <img src="huangtaiji.jpg">
+        <p>清太宗文皇帝爱新觉罗·皇太极（1592年11月28日申时－1643年9月21日亥时），满族，是努尔哈赤第八子。</p>
+        <p>公元1636年，皇太极改女真族名为满洲，在沈阳称帝，建国号大清。皇太极在位17年，南征北战，驰骋沙场，建立并扩大了自己的势力范围。 继位之谜。</p>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>继位之谜</h4>
+        <p>后金天命十一年即1626年的8月21日，努尔哈赤毒疽发作而离世，皇太极继承汗位。</p>
+        <p>据朝鲜史籍《鲁庵文集》记载，老汗王（努尔哈赤）临死曾表示过：“‘皇太极能成吾志’。终无所命而死。”所以看来，皇太极得汗位是符合努尔哈赤遗命的。</p>
+        <p>但是，关于皇太极是如何继位的问题，却有许多不同的争论，因为当时皇太极在诸贝勒中无论是年龄、功绩、外援势力上都没有明显优势，他能不通过政变而顺利登基继承大统，一直是清代的不解之谜。</p>
+      </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>庄妃下嫁：</h4>
+        <p>1613年，蒙古科尔沁部博尔济吉特氏贝勒寨桑生下了一个女儿。当她十三岁时，努尔哈赤第八子皇太极练兵路过寨桑部落，发现她特别漂亮，马上派人送上 聘礼，要求寨桑将女儿许配给他。</p>
+        <p>当时的后金联合了蒙古各部落反对明王朝，所以鼓励后金贵族与蒙古贵族通婚。皇太极原已与寨桑的妹妹为婚，但婚后多年不育， 渐渐对她开始冷淡。小博尔济吉特氏在他的兄长吴克善台吉伴送下到达后金后，皇太极十分宠爱她，先后生育了三个公主。</p>
+        <p>1636年，皇太极改号称帝，封博尔济 特氏为永福宫庄妃。1638年，庄妃生皇九子福临，即日后的顺治帝。福临即位后，尊为皇太后。孙玄烨嗣位，尊为太皇太后。死，谥号孝庄，史称孝庄文皇后。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+        <div class="text">
+        <h4>驾崩之谜</h4>
+        <p>清崇德八年（1643年），清太宗皇太极在沈阳的故宫驾崩。皇太极的死，是清代历史上颇为神秘的事情。关于其死因更是众说纷纭。</p>
+          <p>《清史稿》对皇太极的死因记载十分简单，只有这些文字：“八月丙寅，贝子罗有罪论辟，免死，幽之。戊辰，以宗室巩阿岱为吏部承政，郎球为礼部承政，星讷为工部承政。庚午，上御崇政殿。是夕，亥时，无疾崩，年五十有二，在位十七年。”</p>
+          <p>这段记载可以说十分含糊，根据这段记载，皇太极在驾崩之前，还对国家工作进行了安排，而且头头是道、井井有条。而且在去世当天，他还在处理国事，结果这天夜里就突然去世了。</p>
+        
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+    var articles=document.getElementsByClassName("text");
+    var showHeight=100;
+    var unfolds=document.getElementsByClassName('unfold');
+    var folds=document.getElementsByClassName('fold');
+    i=0;
+    for (i = articles.length - 1; i >= 0; i--) {
+      articles[i].index=i;
+      folds[i].index=i;
+      unfolds[i].index=i;
+      if (articles[i].scrollHeight>showHeight) {
+        unfolds[i].style.display='block';
+        folds[i].style.display='none';
+      }
+      else{
+        unfolds[i].style.display='none';
+        folds[i].style.display='none';
+      }
+      unfolds[i].onclick=function(){
+      articles[this.index].style.height='auto';
+      unfolds[this.index].style.display='none';
+      folds[this.index].style.display='block';
+      }
+      folds[i].onclick=function(){
+        articles[this.index].style.height=showHeight+'px';
+        unfolds[this.index].style.display='block';
+        folds[this.index].style.display='none';
+      }
+    }
+    
+
+    </script>
+  </body>
+</html>

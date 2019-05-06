@@ -1,0 +1,66 @@
+.bg{
+    background: url(../img/box_bg.png);
+    background-size: 100%,100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    width: 100%;
+    height: 100%;
+}
+.game {
+    /*width: 500px;*/
+    /*height: 500px;*/
+    background-color: transparent;
+    position: absolute;
+    /*top: 10px;*/
+    /*left: 10px;*/
+    /*border: 1px solid white;*/
+}
+
+/*
+block : 墙壁，不能走的区域
+start : 起点
+box :   终点
+bomb :  通道，可以走的区域
+cover_box :
+cover_py :
+current_*: 小蝌蚪当前的位置,up表示方向朝上，right表示方向朝右，down表示方向朝下，left表示方向朝左
+*/
+.block, .path, .current, .bomb, .box, .cover_py, .cover_box {
+    /*width: 50px;*/
+    /*height: 50px;*/
+    position: absolute;
+    box-sizing: border-box;
+    /*background-size: 50px 50px;*/
+}
+
+
+.block {
+    background: url(../img/block.png);
+}
+
+.path{
+    background: url(../img/box_bg.png);
+}
+
+.current{
+    background: url(../img/current.png);
+}
+
+.box {
+    background: url(../img/box.png);
+    /*background-color: brown;*/
+}
+
+.bomb {
+    background: url(../img/bomb.png);
+    /*background-color: brown;*/
+}
+
+.cover_box {
+    background: url(../img/cover_box.png);
+}
+
+.cover_py {
+    background: url(../img/cover_py.png);
+}

@@ -1,0 +1,61 @@
+[
+  {
+    "type": "bx_move_up",
+    "message0": "move upward",
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 20,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "bx_move_left",
+    "message0": "move left",
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 20,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "bx_move_right",
+    "message0": "move right",
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 20,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "bx_move_down",
+    "message0": "move downward",
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 20,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+  {
+    "type": "bx_repeat",
+    "message0": "repeat %1 times",
+    "args0":[
+      {
+        "type": "field_input",
+        "name": "TIMES"
+      }
+    ],
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "input_statement",
+        "name": "CONTENT"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 80,
+    "tooltip": "",
+    "helpUrl": ""
+  }
+]

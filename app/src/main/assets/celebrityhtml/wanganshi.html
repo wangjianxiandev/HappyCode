@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="base" class="container">
+      <div class="poem">
+        <h2>王安石</h2>
+      </div>
+      <div class="explainpart">
+        <h4>生平事迹</h4>
+        <img src="wanganshi.jpg">
+        <p>王安石（1021年12月18日－1086年5月21日），字介甫，号半山，汉族，临川（今江西抚州市临川区）人，北宋著名的思想家、政治家、文学家、改革家。 </p>
+        <p>王安石在文学中具有突出成就，短文简洁峻切、短小精悍，名列“唐宋八大家”。</p>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>熙宁变法</h4>
+        <p>熙宁二年（1069年），神宗任命王安石为参知政事，跻身执政之列。王安石提出当务之急在于改变风俗、确立法度，提议变法，神宗赞同。为指导变法的实施，设立制置三司条例司，由王安石和陈升之共同掌管。王安石委任吕惠卿承担条例司的日常事务，派遣提举官四十多人，颁行新法。</p>
+        <p>熙宁三年（1070年），王安石任同中书门下平章事，位同宰相。他在全国范围内推行新法，开始大规模的改革运动。所行新法在财政方面有均输法、青苗法、市易法、免役法、方田均税法、农田水利法；在军事方面有置将法、保甲法、保马法等。 熙宁四年（1071年），王安石颁布改革科举制度法令，废除诗赋词章取士的旧制，恢复以《春秋》，三传明经取士。同年秋，实行太学三舍法制度。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>少年英才</h4>
+        <p>宋真宗天禧五年（1021年），王安石出生于临川（今江西省抚州市临川区）。他的父亲王益，时任临川军判官。王安石自幼聪颖，酷爱读书，过目不忘，下笔成文。稍长，跟随父亲宦游各地，接触现实，体验民间疾苦。文章立论高深奇丽，旁征博引，始有移风易俗之志。宋仁宗景祐四年（1037年），王安石随父入京，以文结识好友曾巩，曾巩向欧阳修推荐其文，大获赞赏。</p>
+        <p>庆历二年（1042年），王安石登杨寘榜进士第四名，授淮南节度判官。任满后，王安石放弃了京试入馆阁的机会，调为鄞县知县。王安石在任四年，兴修水利、扩办学校，初显政绩。</p>
+        <p>皇祐三年（1051年），王安石任舒州通判，勤政爱民，治绩斐然。宰相文彦博以王安石恬淡名利、遵纪守道向仁宗举荐他，请求朝廷褒奖以激励风俗，王安石以不想激起越级提拔之风为由拒绝。欧阳修举荐为谏官，王安石以祖母年高推辞。欧阳修又以王安石须俸禄养家为由，任命他为群牧判官。不久，王安石出任常州知州，得与周敦颐相知，声誉日隆。 王安石主张“发富民之藏”以救“贫民”。“有司必不得已，不若取诸富民之有良田得谷多而售数倍之者。贫民被灾。不可不恤也。”</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+        <div class="text">
+        <h4>恳辞入朝</h4>
+        <p>朝廷多次委任王安石以馆阁之职，均固辞不就。士大夫们以为王安石无意功名，不求仕途，遗憾无缘结识；朝廷屡次想委以重任，都担心王安石不愿出仕。朝廷任命王安石与人同修《起居注》，王安石辞谢多次才接受。不久，王安石任直集贤院、知制诰，审查京城刑狱案件，朝中士大夫都引为盛事。王安石在京任职期间，朝廷规定舍人院不得申请删改诏书文字，王安石认为立法不该如此，据理力争，得罪了王公大臣。嘉祐八年（1063年），王安石因母亲病逝，遂辞官回江宁守丧。宋英宗在位时期（1063年—1066年），屡次征召王安石赴京任职，他均以服母丧和有病为由，拒绝入朝。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+    var articles=document.getElementsByClassName("text");
+    var showHeight=100;
+    var unfolds=document.getElementsByClassName('unfold');
+    var folds=document.getElementsByClassName('fold');
+    i=0;
+    for (i = articles.length - 1; i >= 0; i--) {
+      articles[i].index=i;
+      folds[i].index=i;
+      unfolds[i].index=i;
+      if (articles[i].scrollHeight>showHeight) {
+        unfolds[i].style.display='block';
+        folds[i].style.display='none';
+      }
+      else{
+        unfolds[i].style.display='none';
+        folds[i].style.display='none';
+      }
+      unfolds[i].onclick=function(){
+      articles[this.index].style.height='auto';
+      unfolds[this.index].style.display='none';
+      folds[this.index].style.display='block';
+      }
+      folds[i].onclick=function(){
+        articles[this.index].style.height=showHeight+'px';
+        unfolds[this.index].style.display='block';
+        folds[this.index].style.display='none';
+      }
+    }
+    
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="base" class="container">
+      <div class="poem">
+        <h2>忽必烈</h2>
+      </div>
+      <div class="explainpart">
+        <h4>生平事迹</h4>
+        <img src="hubilie.jpg">
+        <p>　孛儿只斤·忽必烈（1215年—1294年），蒙古族，政治家、军事家。监国托雷第四子，元宪宗蒙哥弟。大蒙古国的末代可汗同时也是元朝的开国皇帝。</p>
+        <p>忽必烈作为一个征服者给被征服地区的人民带来了浩劫，但在历史上仍能获得不错的评价。忽必烈是一个比较成功的新秩序建立者。</p>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>储位之争：</h4>
+        <p>至元二十一年（1284年）那木罕被释还朝，第二年真金死亡，于是，在那木罕心中又燃起了继承帝位的希望欲火。</p>
+        <p>那木罕以为，真金死亡，皇太子之位非他莫属，因此忘乎所以，又干出了“遣使持香祠（祭）岳渎（五岳山神和河神）”的僭越礼分的事情来，受到桑哥的谴责，并想借此整倒安童。这件事，使忽必烈更加不高兴，并最终放弃了选举那木罕为皇位继承人的打算。</p>
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+      <div class="text">
+        <h4>讨伐安南：</h4>
+        <p>安南本为唐朝安南都护府的管辖地，五代后晋时独立出去，建立了瞿越、大越等国号。北宋开宝八年（975年）的时候，被封为交趾郡王，南宋隆兴二年（1164年）的时候，又改封为安南国王，此后该国便独立，地处现今的越南北部。忽必烈即位前后，安南国的统治者为陈氏家族。</p>
+        <p>元宪宗蒙哥三年（1253年），忽必烈就命令手下的大将兀良合台率领蒙军平定云南，云南平定以后，忽必烈亲自率军北返，兀良合台则留下，继续征服其余并未归降的小国。宪宗七年（1257年），兀良合台率领蒙军准备进攻安南国，出兵前他先派出了两位使者出使安南商议归降的事情。安南不但不从，还用酷刑扣押了蒙古使者。兀良合台不见使者回报，遂驱动大军，攻破王都，安南国王陈日无逃窜海岛。兀良合台从狱中找到二位使者，解其缚，一人已死。兀良合台大怒，立誓要抓住陈日无，灭亡安南。但由于天气炎热，蒙军难以适应安南的气候，遂残破王都而返。宪宗八年（1258年），陈日无将王位传于长子陈光昺，陈光昺摄于蒙古大军威力，遣使向兀良合台贡献方物，以求缓和关系。中统元年（1260年），忽必烈即位以后，派遣孟甲和李文俊等出使安南，令其称臣人贡。</p>
+      </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+      <div class="explainpart">
+        <div class="text">
+        <h4>出征日本：</h4>
+        <p>塔儿浑惊呆一阵后，落下几滴眼泪。她悄然走了，是时，伯颜的目光一直注视着她的背影。</p>
+          <p>秃马惕人这一夜都没有入睡，有的饮酒，有的跳舞，庆祝着他们的胜利。死者的盔缨，他们挂在帽子上；死者的弓衣，死者的箭囊，他们背在身上……这样欢乐着。却不知，阿术大军已经排山倒海而来。</p>
+          <p>先是在巴儿思山口，有阿术大军虚张声势，呼喊着要捉拿秃马惕人，然而精锐已从兽行小径而人。阿术见军马畏怯不行，则令人折枝为鞭，不进则打；又令人各带斧、锛、锯、凿之器，以扫山径之障。</p>
+        
+        </div>
+        <button class="unfold">阅读全文</button>
+        <button class="fold">点击收起</button>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+    var articles=document.getElementsByClassName("text");
+    var showHeight=100;
+    var unfolds=document.getElementsByClassName('unfold');
+    var folds=document.getElementsByClassName('fold');
+    i=0;
+    for (i = articles.length - 1; i >= 0; i--) {
+      articles[i].index=i;
+      folds[i].index=i;
+      unfolds[i].index=i;
+      if (articles[i].scrollHeight>showHeight) {
+        unfolds[i].style.display='block';
+        folds[i].style.display='none';
+      }
+      else{
+        unfolds[i].style.display='none';
+        folds[i].style.display='none';
+      }
+      unfolds[i].onclick=function(){
+      articles[this.index].style.height='auto';
+      unfolds[this.index].style.display='none';
+      folds[this.index].style.display='block';
+      }
+      folds[i].onclick=function(){
+        articles[this.index].style.height=showHeight+'px';
+        unfolds[this.index].style.display='block';
+        folds[this.index].style.display='none';
+      }
+    }
+    
+
+    </script>
+  </body>
+</html>
